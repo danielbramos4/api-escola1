@@ -10,7 +10,7 @@ def nome_invalido(nome):
     return not nome.isalpha()
 
 def celular_invalido(celular):
-    modelo = f'[0-9]{2} [0-9]{5}-[0-9]{4}'
+    modelo = r'[0-9]{2} [0-9]{5}-[0-9]{4}'
     resposta = re.findall(modelo, celular)
     print(resposta)
     return not resposta 
